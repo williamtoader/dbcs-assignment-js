@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="customselect.css">
+  <link rel="stylesheet" href="form.css">
+  <script async src="https://use.fontawesome.com/451e0b44ae.js"></script>
+  <script defer src="modal.js"></script>
+  <script type="module" src="mipsum.min.js"></script>
+  <script type="module" src="apiconnector.js"></script>
+  <script defer src="customselect.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <ol class="nav-list">
+      <li class="nav-item">
+        TRAVEL UPDATES
+      </li>
+      <li class="nav-item">
+        REVIEWS
+      </li>
+      <li class="nav-item">
+        ABOUT
+      </li>
+      <li class="nav-item">
+        CONTACT
+      </li>
+    </ol>
+  </nav>
+  <div class="toolbar-container float-left custom-select" style="width: 200px;">
+    <select id="userFilterSelect">
+      <option value="0">All posts</option>
+    </select>
+  </div>
+  <div class="btn-container">
+    <div id="btnAddArticle" class="btn-add-article">
+      <i class="fa fa-solid fa-plus"></i>
+      ADD ARTICLE
+    </div>
+
+
+  </div>
+
+</header>
+
+<div id="addPostModal" class="modal hidden">
+  <form id="addPostForm">
+    <div class="row">
+      <div class="col-25">
+        <label for="title">Title</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="title" name="title" placeholder="Article title">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="userSelectPost">User</label>
+      </div>
+      <div class="col-75">
+        <select id="userSelectPost" name="user">
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Body</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<div id="content">
+
+</div>
+
+<footer>
+  <div id="btnPagePrev" class="footer-btn" style="float: left;">previous</div>
+  <div id="btnPageNext" class="footer-btn" style="float: right;">next</div>
+</footer>
+
+</body>
+</html>

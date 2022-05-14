@@ -1,0 +1,213 @@
+:root {
+    --color-dark: #151515;
+}
+
+body {
+    margin: 0;
+    min-height: 100vw;
+    /*padding: 0;*/
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+article {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.header {
+    min-height: 200px;
+    width: 100%;
+    color: var(--color-dark);
+    display: grid;
+    grid-template-columns: 1fr minmax(600px, auto);
+    grid-template-rows: minmax(100px, auto);
+    gap: 0px 0px;
+    grid-template-areas:
+    ". nav" "toolbar btn";
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2.2pt;
+}
+.header > .title { grid-area: title; }
+.header > .nav { grid-area: nav; }
+
+.nav-item {
+    flex: auto;
+    margin: auto 0 auto auto;
+    text-align: right;
+}
+
+.nav-list {
+    height: 100%;
+    font-size: 8pt;
+    list-style: none;
+    display: flex;
+}
+
+
+.btn-container {
+    text-align: right;
+    grid-area: btn;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.toolbar-container {
+    text-align: left;
+    grid-area: toolbar;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.btn-add-article {
+    display: inline-block;
+    color: var(--color-dark);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    letter-spacing: 1pt;
+
+    padding: 15px;
+    border-radius: 50px;
+
+    border: solid 0.5pt var(--color-dark);
+
+    width: 200px;
+    text-align: center;
+
+    background-color: #FFFFFF;
+}
+
+.btn-add-article:hover {
+    background-color: #DDDDDD;
+}
+
+/* Title section grid */
+.title {
+    margin-top: 20px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 100px 1fr 1fr 1fr 100px;
+    grid-template-rows: minmax(150px, auto) minmax(50px, auto);
+    gap: 0px 0px;
+    grid-template-areas:
+    ". title-heading title-heading title-heading ."
+    ". subtitle-heading added-by-heading date-heading .";
+}
+.title-heading {
+    color: var(--color-dark);
+    margin: auto;
+    font-size: 27pt;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: red;*/
+    grid-area: title-heading;
+    text-align: center;
+}
+.subtitle-heading {
+    margin: auto;
+    font-size: 10pt;
+    font-weight: 400;
+    color: #AAAAAA;
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: green;*/
+    grid-area: subtitle-heading;
+}
+.added-by-heading {
+    margin: auto;
+    font-size: 10pt;
+    font-weight: 400;
+    color: #AAAAAA;
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: blue;*/
+    grid-area: added-by-heading;
+}
+
+.added-by-heading::before {
+    content: "●";
+    padding-right: 20px;
+
+}
+.added-by-heading::after {
+    content: "●";
+    padding-left: 20px;
+}
+
+.date-heading {
+    margin: auto;
+    font-size: 10pt;
+    font-weight: 400;
+    color: #AAAAAA;
+    font-family: 'Open Sans', sans-serif;
+    /*background-color: yellow;*/
+    grid-area: date-heading;
+}
+
+.right-align-container {
+    color: var(--color-dark);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2.2pt;
+    font-size: 11pt;
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+
+.content {
+    font-family: 'EB Garamond', serif;
+    font-weight: 300;
+    font-size: 14pt;
+    color: var(--color-dark);
+    margin-top: 50px;
+    padding-left: 170px;
+    padding-right: 170px;
+    text-align: justify;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+footer > .footer-btn {
+    margin: auto;
+    font-size: 27pt;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+.hero-image {
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    background-color: #DDDDDD;
+    padding: 25px;
+    margin-top: 20px;
+}
